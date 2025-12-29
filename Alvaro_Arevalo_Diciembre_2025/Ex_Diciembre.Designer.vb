@@ -22,6 +22,7 @@ Partial Class Ex_Diciembre
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.BtnVerAlumnos = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.AlumnoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CrearAlumnoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -49,6 +50,15 @@ Partial Class Ex_Diciembre
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'BtnVerAlumnos
+        '
+        Me.BtnVerAlumnos.Location = New System.Drawing.Point(300, 300)
+        Me.BtnVerAlumnos.Name = "BtnVerAlumnos"
+        Me.BtnVerAlumnos.Size = New System.Drawing.Size(200, 50)
+        Me.BtnVerAlumnos.TabIndex = 1
+        Me.BtnVerAlumnos.Text = "Ver Alumnos"
+        Me.BtnVerAlumnos.UseVisualStyleBackColor = True
         '
         'AlumnoToolStripMenuItem
         '
@@ -148,6 +158,7 @@ Partial Class Ex_Diciembre
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.BtnVerAlumnos)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Ex_Diciembre"
@@ -175,4 +186,5 @@ Partial Class Ex_Diciembre
     Friend WithEvents CalculadoraToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ConversorNotasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BtnVerAlumnos As Button
 End Class

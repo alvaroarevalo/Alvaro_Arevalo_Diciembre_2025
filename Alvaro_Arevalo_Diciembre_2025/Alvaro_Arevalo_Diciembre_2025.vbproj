@@ -103,7 +103,7 @@
     <Compile Include="AgregarAsignaturas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Colegio.vb" />
+    <Compile Include="ClasesExamenDiciembre2025.vb" />
     <Compile Include="ConversorNotas.Designer.vb">
       <DependentUpon>ConversorNotas.vb</DependentUpon>
     </Compile>
@@ -145,6 +145,12 @@
       <DependentUpon>ListarAlumno.vb</DependentUpon>
     </Compile>
     <Compile Include="ListarAlumno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerAlumnos.Designer.vb">
+      <DependentUpon>VerAlumnos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VerAlumnos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListarAlumno.resx">
       <DependentUpon>ListarAlumno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerAlumnos.resx">
+      <DependentUpon>VerAlumnos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

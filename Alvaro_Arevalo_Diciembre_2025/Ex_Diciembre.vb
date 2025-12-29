@@ -1,9 +1,17 @@
-﻿Imports Alvaro_Arevalo_Diciembre_2025.Colegio
+﻿Imports Alvaro_Arevalo_Diciembre_2025.ClasesExamenDiciembre2025
+
 Public Class Ex_Diciembre
-    Public AlumnoNew As Alumno
+    Public AlumnoNew As Academico
     Public NotasNew As Notas
     Public RecibosNew As Recibos
     Dim AlumnoCreado As Boolean = False
+
+    Private Sub Ex_Diciembre_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If MessageBox.Show("¿Seguro que desea salir?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No Then
+            e.Cancel = True
+        End If
+    End Sub
+
     Private Sub CalculadoraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CalculadoraToolStripMenuItem.Click
         FrmCalculadora.ShowDialog()
     End Sub
@@ -17,12 +25,17 @@ Public Class Ex_Diciembre
     End Sub
 
     Private Sub CrearAlumnoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CrearAlumnoToolStripMenuItem.Click
-        AlumnoNew = New Alumno
+        ' Instanciamos Academico para tener soporte de asignaturas
+        AlumnoNew = New Academico
         NotasNew = New Notas
         RecibosNew = New Recibos
 
-        MessageBox.Show("Alumno Creado")
+        MessageBox.Show("Alumno (Académico) Creado")
         AlumnoCreado = True
+    End Sub
+
+    Private Sub BtnVerAlumnos_Click(sender As Object, e As EventArgs) Handles BtnVerAlumnos.Click
+        VerAlumnos.ShowDialog()
     End Sub
 
     Private Sub IntroducirDatosPersonalesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IntroducirDatosPersonalesToolStripMenuItem.Click

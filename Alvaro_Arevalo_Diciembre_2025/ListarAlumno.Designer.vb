@@ -35,6 +35,12 @@ Partial Class ListarAlumno
         Me.TxtMatricula = New System.Windows.Forms.TextBox()
         Me.TxtNacimineto = New System.Windows.Forms.TextBox()
         Me.TxtEdad = New System.Windows.Forms.TextBox()
+        Me.LabelApellido2 = New System.Windows.Forms.Label()
+        Me.TxtApellido2 = New System.Windows.Forms.TextBox()
+        Me.LabelDomicilio = New System.Windows.Forms.Label()
+        Me.TxtDomicilio = New System.Windows.Forms.TextBox()
+        Me.LabelTelefono = New System.Windows.Forms.Label()
+        Me.TxtTelefono = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -53,7 +59,7 @@ Partial Class ListarAlumno
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(49, 13)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Apellidos"
+        Me.Label2.Text = "Apellido 1"
         '
         'Label3
         '
@@ -62,12 +68,12 @@ Partial Class ListarAlumno
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(16, 13)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Id"
+        Me.Label3.Text = "DNI"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 150)
+        Me.Label4.Location = New System.Drawing.Point(12, 260)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(75, 13)
         Me.Label4.TabIndex = 3
@@ -76,7 +82,7 @@ Partial Class ListarAlumno
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 177)
+        Me.Label5.Location = New System.Drawing.Point(12, 287)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(93, 13)
         Me.Label5.TabIndex = 4
@@ -85,7 +91,7 @@ Partial Class ListarAlumno
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(12, 208)
+        Me.Label6.Location = New System.Drawing.Point(12, 318)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(32, 13)
         Me.Label6.TabIndex = 5
@@ -93,10 +99,10 @@ Partial Class ListarAlumno
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(105, 257)
+        Me.Button1.Location = New System.Drawing.Point(105, 360)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 6
+        Me.Button1.TabIndex = 13
         Me.Button1.Text = "Cerrar"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -127,7 +133,7 @@ Partial Class ListarAlumno
         'TxtMatricula
         '
         Me.TxtMatricula.Enabled = False
-        Me.TxtMatricula.Location = New System.Drawing.Point(105, 143)
+        Me.TxtMatricula.Location = New System.Drawing.Point(105, 253)
         Me.TxtMatricula.Name = "TxtMatricula"
         Me.TxtMatricula.Size = New System.Drawing.Size(186, 20)
         Me.TxtMatricula.TabIndex = 10
@@ -135,7 +141,7 @@ Partial Class ListarAlumno
         'TxtNacimineto
         '
         Me.TxtNacimineto.Enabled = False
-        Me.TxtNacimineto.Location = New System.Drawing.Point(105, 170)
+        Me.TxtNacimineto.Location = New System.Drawing.Point(105, 280)
         Me.TxtNacimineto.Name = "TxtNacimineto"
         Me.TxtNacimineto.Size = New System.Drawing.Size(186, 20)
         Me.TxtNacimineto.TabIndex = 11
@@ -143,16 +149,73 @@ Partial Class ListarAlumno
         'TxtEdad
         '
         Me.TxtEdad.Enabled = False
-        Me.TxtEdad.Location = New System.Drawing.Point(105, 201)
+        Me.TxtEdad.Location = New System.Drawing.Point(105, 311)
         Me.TxtEdad.Name = "TxtEdad"
         Me.TxtEdad.Size = New System.Drawing.Size(186, 20)
         Me.TxtEdad.TabIndex = 12
+        '
+        'LabelApellido2
+        '
+        Me.LabelApellido2.AutoSize = True
+        Me.LabelApellido2.Location = New System.Drawing.Point(12, 147)
+        Me.LabelApellido2.Name = "LabelApellido2"
+        Me.LabelApellido2.Size = New System.Drawing.Size(49, 13)
+        Me.LabelApellido2.TabIndex = 14
+        Me.LabelApellido2.Text = "Apellido 2"
+        '
+        'TxtApellido2
+        '
+        Me.TxtApellido2.Enabled = False
+        Me.TxtApellido2.Location = New System.Drawing.Point(105, 144)
+        Me.TxtApellido2.Name = "TxtApellido2"
+        Me.TxtApellido2.Size = New System.Drawing.Size(186, 20)
+        Me.TxtApellido2.TabIndex = 15
+        '
+        'LabelDomicilio
+        '
+        Me.LabelDomicilio.AutoSize = True
+        Me.LabelDomicilio.Location = New System.Drawing.Point(12, 177)
+        Me.LabelDomicilio.Name = "LabelDomicilio"
+        Me.LabelDomicilio.Size = New System.Drawing.Size(49, 13)
+        Me.LabelDomicilio.TabIndex = 16
+        Me.LabelDomicilio.Text = "Domicilio"
+        '
+        'TxtDomicilio
+        '
+        Me.TxtDomicilio.Enabled = False
+        Me.TxtDomicilio.Location = New System.Drawing.Point(105, 174)
+        Me.TxtDomicilio.Name = "TxtDomicilio"
+        Me.TxtDomicilio.Size = New System.Drawing.Size(186, 20)
+        Me.TxtDomicilio.TabIndex = 17
+        '
+        'LabelTelefono
+        '
+        Me.LabelTelefono.AutoSize = True
+        Me.LabelTelefono.Location = New System.Drawing.Point(12, 207)
+        Me.LabelTelefono.Name = "LabelTelefono"
+        Me.LabelTelefono.Size = New System.Drawing.Size(49, 13)
+        Me.LabelTelefono.TabIndex = 18
+        Me.LabelTelefono.Text = "Telefono"
+        '
+        'TxtTelefono
+        '
+        Me.TxtTelefono.Enabled = False
+        Me.TxtTelefono.Location = New System.Drawing.Point(105, 204)
+        Me.TxtTelefono.Name = "TxtTelefono"
+        Me.TxtTelefono.Size = New System.Drawing.Size(186, 20)
+        Me.TxtTelefono.TabIndex = 19
         '
         'ListarAlumno
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(295, 330)
+        Me.ClientSize = New System.Drawing.Size(320, 420)
+        Me.Controls.Add(Me.LabelTelefono)
+        Me.Controls.Add(Me.TxtTelefono)
+        Me.Controls.Add(Me.LabelDomicilio)
+        Me.Controls.Add(Me.TxtDomicilio)
+        Me.Controls.Add(Me.LabelApellido2)
+        Me.Controls.Add(Me.TxtApellido2)
         Me.Controls.Add(Me.TxtEdad)
         Me.Controls.Add(Me.TxtNacimineto)
         Me.Controls.Add(Me.TxtMatricula)
@@ -186,4 +249,10 @@ Partial Class ListarAlumno
     Friend WithEvents TxtMatricula As TextBox
     Friend WithEvents TxtNacimineto As TextBox
     Friend WithEvents TxtEdad As TextBox
+    Friend WithEvents LabelApellido2 As Label
+    Friend WithEvents TxtApellido2 As TextBox
+    Friend WithEvents LabelDomicilio As Label
+    Friend WithEvents TxtDomicilio As TextBox
+    Friend WithEvents LabelTelefono As Label
+    Friend WithEvents TxtTelefono As TextBox
 End Class

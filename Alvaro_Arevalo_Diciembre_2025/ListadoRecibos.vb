@@ -1,15 +1,20 @@
-﻿Public Class ListadoRecibos
+﻿Imports Alvaro_Arevalo_Diciembre_2025.ClasesExamenDiciembre2025
+Imports Alvaro_Arevalo_Diciembre_2025.Ex_Diciembre
+
+Public Class ListadoRecibos
     Dim Pagado As Boolean = False
     Private Sub ListadoRecibos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LblTitulo.Text = "Recibo de " + Ex_Diciembre.AlumnoNew.ObtenerNombreCompleto()
         TxtId.Text = Ex_Diciembre.RecibosNew.IdRecibo
         TxtConcepto.Text = Ex_Diciembre.RecibosNew.Concepto
-        TxtImporte.Text = Ex_Diciembre.RecibosNew.Importe
-        TxtFechaPago.Text = String.Format(Ex_Diciembre.RecibosNew.FechaPago)
+        TxtImporte.Text = Ex_Diciembre.RecibosNew.Importe.ToString("C2") ' Formato moneda
+        TxtFechaPago.Text = If(Ex_Diciembre.RecibosNew.Pagado, Ex_Diciembre.RecibosNew.FechaPago.ToShortDateString(), "PENDIENTE")
         If Ex_Diciembre.RecibosNew.Pagado Then
-            ChPagado.Checked = 1
+            ChPagado.Checked = True
+            Pagado = True
         Else
-            ChPagado.Checked = 0
+            ChPagado.Checked = False
+            Pagado = False
         End If
     End Sub
 
@@ -32,4 +37,6 @@
 
         Me.Close()
     End Sub
+
+
 End Class
