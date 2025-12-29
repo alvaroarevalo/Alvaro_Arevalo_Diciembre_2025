@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4AC4FF72-0E5E-4859-9285-FF9CCDF65C33}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Alvaro_Arevalo_Diciembre_2025.My.MyApplication</StartupObject>
+    <RootNamespace>Alvaro_Arevalo_Diciembre_2025</RootNamespace>
+    <AssemblyName>Alvaro_Arevalo_Diciembre_2025</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Alvaro_Arevalo_Diciembre_2025.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Alvaro_Arevalo_Diciembre_2025.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddDatosPersonales.Designer.vb">
+      <DependentUpon>AddDatosPersonales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddDatosPersonales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNotas.Designer.vb">
+      <DependentUpon>AddNotas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddNotas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNotasParciales.Designer.vb">
+      <DependentUpon>AddNotasParciales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddNotasParciales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRecibos.Designer.vb">
+      <DependentUpon>AddRecibos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddRecibos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarAsignaturas.Designer.vb">
+      <DependentUpon>AgregarAsignaturas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarAsignaturas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colegio.vb" />
+    <Compile Include="ConversorNotas.Designer.vb">
+      <DependentUpon>ConversorNotas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConversorNotas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex_Diciembre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ex_Diciembre.Designer.vb">
+      <DependentUpon>Ex_Diciembre.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCalculadora.Designer.vb">
+      <DependentUpon>FrmCalculadora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCalculadora.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoAsignaturas.Designer.vb">
+      <DependentUpon>ListadoAsignaturas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoAsignaturas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoNotas.Designer.vb">
+      <DependentUpon>ListadoNotas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoNotas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoRecibos.Designer.vb">
+      <DependentUpon>ListadoRecibos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoRecibos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarAlumno.Designer.vb">
+      <DependentUpon>ListarAlumno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListarAlumno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddDatosPersonales.resx">
+      <DependentUpon>AddDatosPersonales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNotas.resx">
+      <DependentUpon>AddNotas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNotasParciales.resx">
+      <DependentUpon>AddNotasParciales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRecibos.resx">
+      <DependentUpon>AddRecibos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarAsignaturas.resx">
+      <DependentUpon>AgregarAsignaturas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConversorNotas.resx">
+      <DependentUpon>ConversorNotas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ex_Diciembre.resx">
+      <DependentUpon>Ex_Diciembre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCalculadora.resx">
+      <DependentUpon>FrmCalculadora.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoAsignaturas.resx">
+      <DependentUpon>ListadoAsignaturas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoNotas.resx">
+      <DependentUpon>ListadoNotas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoRecibos.resx">
+      <DependentUpon>ListadoRecibos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarAlumno.resx">
+      <DependentUpon>ListarAlumno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
