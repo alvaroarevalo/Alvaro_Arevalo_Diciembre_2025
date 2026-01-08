@@ -25,7 +25,6 @@ Public Class Ex_Diciembre
     End Sub
 
     Private Sub CrearAlumnoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CrearAlumnoToolStripMenuItem.Click
-        ' Instanciamos Academico para tener soporte de asignaturas
         AlumnoNew = New Academico
         NotasNew = New Notas
         RecibosNew = New Recibos

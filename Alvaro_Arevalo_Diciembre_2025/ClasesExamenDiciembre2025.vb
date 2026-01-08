@@ -12,7 +12,6 @@
         Public Sub New()
         End Sub
 
-        ' Modificamos IntroducirDatos para incluir los nuevos campos
         Public Sub IntroducirDatos(NewDni As String, NewNmat As Integer, NewName As String, NewApellido1 As String, NewApellido2 As String, NewDomicilio As String, NewTelefono As String, NewFechNacimiento As Date)
             _dni = NewDni
             If String.IsNullOrWhiteSpace(_dni) Then _dni = "00000000A"
@@ -114,6 +113,7 @@
         Public Function CalcularEdad() As Integer
             Dim hoy As Date = Date.Today
             Dim edad As Integer = hoy.Year - _fechaNacimiento.Year
+            ' Si aun no ha cumplido años este año, restamos 1
             If _fechaNacimiento.Date > hoy.AddYears(-edad) Then
                 edad -= 1
             End If
@@ -136,7 +136,7 @@
             Try
                 If Not System.IO.Directory.Exists(carpeta) Then System.IO.Directory.CreateDirectory(carpeta)
 
-                ' Formato con los nuevos campos separados
+                ' Formato con los campos separados
                 datosAlumno = $"{Me.DNI}|{Me.NMat}|{Me.Nombre}|{Me.Apellido1}|{Me.Apellido2}|{Me.Domicilio}|{Me.Telefono}|{Me.FechaNacimiento.ToShortDateString()}" & Environment.NewLine
 
                 ' Usamos AppendAllText para guardar uno debajo de otro
@@ -163,7 +163,7 @@
                 linea = linea.Trim()
 
                 Dim campos() As String = linea.Split("|"c)
-                ' Ahora esperamos 8 campos
+                ' Esperamos 8 campos
                 If campos.Length = 8 Then
                     Me.DNI = campos(0)
                     Me.NMat = Integer.Parse(campos(1))
@@ -178,9 +178,33 @@
                 Console.WriteLine($"Error al cargar alumno: {ex.Message}")
             End Try
         End Sub
+
+        Public Sub CargarListaAlumnos(lista As System.Windows.Forms.ListBox)
+            lista.Items.Clear()
+            Dim rutaFichero As String = "Ficheros\alumnos.txt"
+
+            If System.IO.File.Exists(rutaFichero) Then
+                Try
+                    Dim lineas As String() = System.IO.File.ReadAllLines(rutaFichero)
+                    For Each linea As String In lineas
+                        If Not String.IsNullOrWhiteSpace(linea) Then
+                            Dim campos As String() = linea.Split("|"c)
+                            ' Formato esperado: DNI|NMat|Nombre|Apellido1...
+                            If campos.Length >= 4 Then
+                                Dim info As String = $"{campos(0)} - {campos(2)} {campos(3)} {campos(4)}"
+                                lista.Items.Add(info)
+                            End If
+                        End If
+                    Next
+                Catch ex As Exception
+                    System.Windows.Forms.MessageBox.Show("Error al leer el archivo de alumnos: " & ex.Message)
+                End Try
+            Else
+                lista.Items.Add("No hay alumnos registrados.")
+            End If
+        End Sub
     End Class
 
-    ' Clase Academico HEREDA de Alumno y tiene ArrayList de Asignaturas
     Public Class Academico
         Inherits Alumno
 
@@ -206,7 +230,6 @@
             End Set
         End Property
 
-        ' Método auxiliar para obtener asignaturas como array de strings si se necesita compatibilidad
         Public Function GetAsignaturasArray() As String()
             Return CType(_asignaturas.ToArray(GetType(String)), String())
         End Function
@@ -288,9 +311,6 @@
 
             Try
                 If Not System.IO.Directory.Exists(carpeta) Then System.IO.Directory.CreateDirectory(carpeta)
-
-                ' Se guarda asociado al curso. Nota: Al heredar de Alumno, idealmente guardariamos DNI tambien, 
-                ' pero mantengo logica simple anterior si no se exige cambio especifico en persistencia de notas.
                 Dim strParciales As String = String.Join("-", _notasParciales)
                 Dim linea As String = $"{_nombreCurso}|{strParciales}|{_notaFinalOrdinaria}|{_notaFinalExtraordinaria}"
 

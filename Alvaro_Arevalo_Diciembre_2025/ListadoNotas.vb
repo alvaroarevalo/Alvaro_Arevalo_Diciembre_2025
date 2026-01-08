@@ -12,7 +12,6 @@ Public Class ListadoNotas
         Dim Notas As Double() = Ex_Diciembre.NotasNew.NotasParciales
         If Notas IsNot Nothing Then
             For Each n In Notas
-                 ' Evitar pintar valores 0 sobrantes si la logica previa inicializaba array vacio raro
                  If n > 0 OrElse Notas.Length = 1 Then 
                      TxtNotas.Text = TxtNotas.Text + Str(n) + " | "
                  End If

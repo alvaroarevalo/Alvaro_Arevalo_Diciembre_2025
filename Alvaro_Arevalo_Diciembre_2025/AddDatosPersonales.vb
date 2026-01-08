@@ -14,13 +14,13 @@ Public Class AddDatosPersonales
 
         Try
             Nombre = TxtNombre.Text
-            Apellido1 = TxtApellidos.Text ' Asumimos TxtApellidos es Apellido1
+            Apellido1 = TxtApellidos.Text
             Apellido2 = TxtApellido2.Text
             Domicilio = TxtDomicilio.Text
             Telefono = TxtTelefono.Text
 
             FechaNacimiento = DateNacimineto.Text
-            DNI = TxtId.Text ' Asumimos TxtId es DNI
+            DNI = TxtId.Text
             NMat = Integer.Parse(If(String.IsNullOrWhiteSpace(TxtNumeroMatricula.Text), "0", TxtNumeroMatricula.Text))
 
         Catch ex As Exception
@@ -33,12 +33,11 @@ Public Class AddDatosPersonales
         Me.Close()
     End Sub
 
-    ' Validación para que solo admita números
+    ' Validación para que solo admita números en el campo del teléfono
     Private Sub TxtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtTelefono.KeyPress
         If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) Then
             e.Handled = True
         End If
     End Sub
-
 
 End Class

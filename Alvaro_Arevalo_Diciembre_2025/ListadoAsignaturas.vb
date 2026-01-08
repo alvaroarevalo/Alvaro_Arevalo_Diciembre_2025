@@ -5,8 +5,7 @@ Public Class ListadoAsignaturas
     Private Sub ListadoAsignaturas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LblTitulo.Text = "Listado de Asignaturas de"
         TxtAsignaturas.Text = ""
-        
-        ' Usamos ListaAsignaturas que es un ArrayList
+
         Dim Asignaturas As System.Collections.ArrayList = Ex_Diciembre.AlumnoNew.ListaAsignaturas
 
         Dim NombreCompleto As String = Ex_Diciembre.AlumnoNew.ObtenerNombreCompleto()

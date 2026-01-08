@@ -15,6 +15,7 @@ Public Class AddNotasParciales
         End Try
     End Sub
 
+    ' Validación para que solo admita números en el campo de la nota
     Private Sub TxtNota_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtNota.KeyPress
         If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) AndAlso e.KeyChar <> ","c Then
             e.Handled = True

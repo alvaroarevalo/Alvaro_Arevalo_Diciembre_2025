@@ -10,12 +10,11 @@ Public Class AddRecibos
         Try
             IdRecibo = TxtId.Text
             Concepto = TxtConcepto.Text
-            Importe = Double.Parse(TxtImporte.Text) ' Aseguramos conversion
+            Importe = Double.Parse(TxtImporte.Text)
         Catch ex As Exception
             MessageBox.Show("Datos incompletos o mal introducidos, se les pondran datos por defecto")
         End Try
 
-        ' Usamos IntroducirDatosRecibo
         Ex_Diciembre.RecibosNew.IntroducirDatosRecibo(IdRecibo, Concepto, Importe)
         MessageBox.Show("Recibo " + IdRecibo + " creado correctamente")
         Ex_Diciembre.RecibosNew.GuardarRecibo()

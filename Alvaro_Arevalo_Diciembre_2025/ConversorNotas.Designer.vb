@@ -25,6 +25,7 @@ Partial Class ConversorNotas
         Me.BtnConvertir = New System.Windows.Forms.Button()
         Me.TxtNum = New System.Windows.Forms.TextBox()
         Me.LblConverter = New System.Windows.Forms.Label()
+        Me.LblTitulo = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'BtnConvertir
@@ -52,11 +53,22 @@ Partial Class ConversorNotas
         Me.LblConverter.TabIndex = 2
         Me.LblConverter.Text = "----"
         '
+        'LblTitulo
+        '
+        Me.LblTitulo.AutoSize = True
+        Me.LblTitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTitulo.Location = New System.Drawing.Point(12, 20)
+        Me.LblTitulo.Name = "LblTitulo"
+        Me.LblTitulo.Size = New System.Drawing.Size(193, 24)
+        Me.LblTitulo.TabIndex = 3
+        Me.LblTitulo.Text = "Conversor de notas"
+        '
         'ConversorNotas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(561, 167)
+        Me.Controls.Add(Me.LblTitulo)
         Me.Controls.Add(Me.LblConverter)
         Me.Controls.Add(Me.TxtNum)
         Me.Controls.Add(Me.BtnConvertir)
@@ -70,4 +82,5 @@ Partial Class ConversorNotas
     Friend WithEvents BtnConvertir As Button
     Friend WithEvents TxtNum As TextBox
     Friend WithEvents LblConverter As Label
+    Friend WithEvents LblTitulo As Label
 End Class
